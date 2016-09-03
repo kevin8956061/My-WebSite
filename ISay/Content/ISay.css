@@ -1,0 +1,23 @@
+﻿.bs_bg {
+    background-image: url('/img/bs-bg.jpg');
+}
+
+.travel_bg {
+    background-image: url('/img/travel-bg.jpg');
+}
+
+.contact_bg {
+    background-image: url('/img/contact-bg.jpg');
+}
+
+.about_bg {
+    background-image: url('/img/about-bg.jpg');
+}
+
+.post_bg {
+    background-image: url('/img/post-bg.jpg');
+}
+
+.margin_sm {
+    margin-right: 5px;
+}
