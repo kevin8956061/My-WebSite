@@ -1,0 +1,56 @@
+﻿@model IPagedList<ISay.Models.Blog>
+
+@{
+
+}
+
+<!-- Page Header -->
+<header class="intro-header @ViewBag.CssType">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>@ViewBag.Title</h1>
+                    <span class="subheading">Then I think.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+            @foreach (var item in Model)
+            {
+                <div class="post-preview">
+
+                    <a href="@Url.Action("Details", "Blogs", new { id = item.seqno, tag = ViewBag.PostType })">
+
+                        <h2 class="post-title">
+                            @Html.DisplayFor(modelItem => item.title)
+                        </h2>
+                        <h3 class="post-subtitle">
+                            @Html.DisplayFor(modelItem => item.subtitle)
+                        </h3>
+                    </a>
+
+                    <p class="post-meta">
+                        Posted by @Html.DisplayFor(modelItem => item.creator)
+                        on @Html.DisplayFor(modelItem => item.create_date)
+                    </p>
+                </div>
+                <hr>
+            }
+            <!-- Pager -->
+            <div class="pager">
+                @Html.Pager(Model.PageSize, Model.PageNumber, Model.TotalItemCount)
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
