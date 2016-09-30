@@ -21,3 +21,8 @@
 .margin_sm {
     margin-right: 5px;
 }
+
+.font_sm {
+    font-size: 14px;
+    vertical-align: bottom;
+}
