@@ -26,7 +26,7 @@ namespace ISay.Controllers
             if (tag.Equals("BossSay") || tag.Equals("Travel"))
             {
                 ViewBag.PostType = tag;
-                ViewBag.Title = tag == "BossSay" ? "Boss Say" : tag;
+                ViewBag.Title = tag == "BossSay" ? "Boss Says" : tag;
                 ViewBag.CssType = tag == "BossSay" ? "bs_bg" : "travel_bg";
 
                 var blogs = db.Blogs

@@ -21,7 +21,8 @@ namespace ISay
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.min.js", // Bootstrap Core JavaScript  
-                      "~/Scripts/clean-blog.min.js" // Custom Theme JavaScript
+                      "~/Scripts/clean-blog.min.js", // Custom Theme JavaScript
+                      "~/Scripts/GoogleAnalytics.js" // Google Analytics
                       ));  
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
