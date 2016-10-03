@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>YW - @ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    <link href="~/Content/404Error.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="wrap">
+        <div class="banner">
+            <img src="~/img/errorpage.jpg" width="250" height="250" />
+        </div>
+        <div class="page">
+            <h2>@ViewBag.ErrMsg_CN</h2>
+            <h2>@ViewBag.ErrMsg_EN</h2>
+            <!-- Pager -->
+            <ul class="pager" style="text-align:center;">
+                <li>
+                    <a href="@Url.Action("Index", "AboutMe")"><span>&larr; Back to Home</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
